@@ -1,6 +1,6 @@
 {
   "name": "@ovenwand/abstract-class-decorator",
-  "version": "0.0.0",
+  "version": "1.0.0-pre",
   "author": "Sibbe Heijne",
   "license": "ISC",
   "repository": "git+https://github.com/Ovenwand/AbstractClassDecoratorJS.git",
