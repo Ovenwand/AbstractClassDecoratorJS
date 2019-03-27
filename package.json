@@ -1,0 +1,80 @@
+{
+  "name": "@ovenwand/abstract-class-decorator",
+  "version": "0.0.0",
+  "author": "Sibbe Heijne",
+  "license": "ISC",
+  "repository": "git+https://github.com/Ovenwand/AbstractClassDecoratorJS.git",
+  "bugs": {
+    "url": "https://github.com/Ovenwand/AbstractClassDecoratorJS/issues"
+  },
+  "homepage": "https://github.com/Ovenwand/AbstractClassDecoratorJS#readme",
+  "main": "dist/abstract-class-decorator.min.js",
+  "scripts": {
+    "start": "yarn test:watch",
+    "release": "bash release.sh",
+    "bundle": "rm -rf dist/* && yarn bundle:build",
+    "bundle:build": "cross-env NODE_ENV=production babel-node build.js",
+    "bundle:analyze": "yarn bundle:build --profile --analyze",
+    "lint": "eslint --ext .js src build.js",
+    "test": "karma start",
+    "test:watch": "yarn test --auto-watch --no-single-run"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.2",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.15.3",
+    "karma": "^4.0.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.2",
+    "karma-jasmine": "^2.0.1",
+    "karma-webpack": "^3.0.5",
+    "ora": "^3.2.0",
+    "uglifyjs-webpack-plugin": "^2.1.2",
+    "webpack": "^4.29.6",
+    "webpack-bundle-analyzer": "^3.1.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "eslintConfig": {
+    "root": true,
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 2017,
+      "sourceType": "module"
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "jasmine": true,
+      "es6": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ],
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ]
+    }
+  }
+}
